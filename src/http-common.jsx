@@ -1,10 +1,10 @@
-import axios from 'axios';
+import axios from "axios";
 
 const http = axios.create({
-    baseURL: 'https://sherote-homework-2.onrender.com/',
+  baseURL: "https://sherote-homework-2.onrender.com/",
   headers: {
-    'Content-type': 'application/json'
-  }
+    "Content-type": "application/json",
+  },
 });
 
 class TutorialDataService {
@@ -16,22 +16,16 @@ class TutorialDataService {
     return http.get(`/shelter/${id}`);
   }
 
-//   create(data) {
-//     return http.post("/tutorials", data);
-//   }
+  update(id, data) {
+    return http.put(`/shelter/${id}`, data);
+  }
 
-//   update(id, data) {
-//     return http.put(`/tutorials/${id}`, data);
-//   }
-
-//   delete(id) {
-//     return http.delete(`/tutorials/${id}`);
-//   }
-
-//   deleteAll() {
-//     return http.delete(`/tutorials`);
-//   }
-
+  delete(id) {
+    return http.delete(`/shelter/${id}`);
+  }
+  create(data) {
+    return http.post("/shelter", data);
+  }
 }
 
 export default new TutorialDataService();

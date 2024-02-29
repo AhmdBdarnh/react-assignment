@@ -9,8 +9,9 @@
   margin-bottom: 20px;
 }
 
-.button {
-  background-color: #4CAF50;
+.button,
+.update,
+.delete {
   border: none;
   color: white;
   padding: 10px 20px;
@@ -21,6 +22,16 @@
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
+}
+.button {
+  background-color: #4caf50;
+}
+.update {
+  background-color: blue;
+}
+
+.delete {
+  background-color: red;
 }
 
 .shelters-container {
@@ -36,11 +47,6 @@
   width: 300px;
   background-color: #a9a5bd;
 }
-
-
-
-
-
 
 /* Styles for the header */
 header {
@@ -68,11 +74,11 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin:0 auto;
+  margin: 0 auto;
   height: 500px;
 }
 .home-main > * {
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
 .home-main button {
@@ -89,4 +95,13 @@ header {
 
 .home-main button:hover {
   background-color: #7914ec;
+}
+
+/* updateShelter */
+
+.update-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  height: 500px;
 }
